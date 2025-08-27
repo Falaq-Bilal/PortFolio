@@ -332,7 +332,7 @@ class CustomProject extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         image: const DecorationImage(
-                          image: AssetImage("assets/whatsapp_Screen.jpg"),
+                          image: AssetImage("assets/whatsapp_screen.jpg"),
                           fit: BoxFit.cover,
                         ),
                       ),
