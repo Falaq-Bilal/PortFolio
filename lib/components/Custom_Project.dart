@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/utils/Themes.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class CustomProject extends StatelessWidget {
   const CustomProject({super.key});
@@ -7,6 +8,13 @@ class CustomProject extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
+    Future<void> _launchURL(String url) async {
+  final Uri uri = Uri.parse(url);
+  if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
+    throw 'Could not launch $url';
+  }
+}
+
 
     int crossAxisCount;
     if (width < 500) {
@@ -98,7 +106,7 @@ class CustomProject extends StatelessWidget {
                           ),
                           const SizedBox(height: 15),
                           OutlinedButton(
-                            onPressed: () {},
+                            onPressed: () {_launchURL("https://falaq-bilal.github.io/Youtube_Screen_Web/");},
                             style: OutlinedButton.styleFrom(
                               foregroundColor: Themes.white,
                               side: BorderSide(color: Themes.white),
@@ -140,7 +148,7 @@ class CustomProject extends StatelessWidget {
                           ),
                           const SizedBox(height: 15),
                           OutlinedButton(
-                            onPressed: () {},
+                            onPressed: () {_launchURL("https://falaq-bilal.github.io/Collage_Using_Stack_Web/");},
                             style: OutlinedButton.styleFrom(
                               foregroundColor: Themes.white,
                               side: BorderSide(color: Themes.white),
@@ -160,7 +168,7 @@ class CustomProject extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         image: const DecorationImage(
-                          image: AssetImage("assets/google 2.png"),
+                          image: AssetImage("assets/insta_scroll.jpg"),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -176,14 +184,14 @@ class CustomProject extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            "Google Screen",
+                            "Instagram Scroll",
                             style: textTheme.displayMedium!.copyWith(
                               color: Themes.white,
                             ),
                           ),
                           const SizedBox(height: 15),
                           OutlinedButton(
-                            onPressed: () {},
+                            onPressed: () {_launchURL("https://falaq-bilal.github.io/Insta_Post_Scroll_Web/");},
                             style: OutlinedButton.styleFrom(
                               foregroundColor: Themes.white,
                               side: BorderSide(color: Themes.white),
@@ -197,47 +205,6 @@ class CustomProject extends StatelessWidget {
                 ),
                 
         
-                 Stack(
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        image: const DecorationImage(
-                          image: AssetImage("assets/heart_frame.png"),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: Colors.black.withOpacity(0.4),
-                      ),
-                    ),
-                    Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "ClipPaths",
-                            style: textTheme.displayMedium!.copyWith(
-                              color: Themes.white,
-                            ),
-                          ),
-                          const SizedBox(height: 15),
-                          OutlinedButton(
-                            onPressed: () {},
-                            style: OutlinedButton.styleFrom(
-                              foregroundColor: Themes.white,
-                              side: BorderSide(color: Themes.white),
-                            ),
-                            child: const Text("View Project"),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
                 
         
                  Stack(
@@ -269,7 +236,7 @@ class CustomProject extends StatelessWidget {
                           ),
                           const SizedBox(height: 15),
                           OutlinedButton(
-                            onPressed: () {},
+                            onPressed: () {_launchURL("https://falaq-bilal.github.io/Profile_Page_Web/");},
                             style: OutlinedButton.styleFrom(
                               foregroundColor: Themes.white,
                               side: BorderSide(color: Themes.white),
@@ -312,7 +279,7 @@ class CustomProject extends StatelessWidget {
                           ),
                           const SizedBox(height: 15),
                           OutlinedButton(
-                            onPressed: () {},
+                            onPressed: () {_launchURL("https://falaq-bilal.github.io/Sign_Up_Page_Web/");},
                             style: OutlinedButton.styleFrom(
                               foregroundColor: Themes.white,
                               side: BorderSide(color: Themes.white),
@@ -324,15 +291,14 @@ class CustomProject extends StatelessWidget {
                     ),
                   ],
                 ),
-                
-        
+
                  Stack(
                   children: [
                     Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         image: const DecorationImage(
-                          image: AssetImage("assets/whatsapp_screen.jpg"),
+                          image: AssetImage("assets/group_screen.jpg"),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -347,15 +313,17 @@ class CustomProject extends StatelessWidget {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text(
-                            "WhatsApp Screen",
-                            style: textTheme.displayMedium!.copyWith(
-                              color: Themes.white,
+                          Center(
+                            child: Text(
+                              "Group Screen",
+                              style: textTheme.displayMedium!.copyWith(
+                                color: Themes.white,
+                              ),
                             ),
                           ),
                           const SizedBox(height: 15),
                           OutlinedButton(
-                            onPressed: () {},
+                            onPressed: () {_launchURL("https://falaq-bilal.github.io/Web_Group_Screen/");},
                             style: OutlinedButton.styleFrom(
                               foregroundColor: Themes.white,
                               side: BorderSide(color: Themes.white),
@@ -368,7 +336,9 @@ class CustomProject extends StatelessWidget {
                   ],
                 ),
                 
+                
         
+                 
                  
               ],
             ),
