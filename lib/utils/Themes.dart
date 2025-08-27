@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class Themes {
   static const Color cyan = Color(0xFF00B8D9);
-  static const Color navy = Color(0xFF0D1B2A);
+  static const Color navy = Color(0xff080731);
   static const Color darkBlue = Color(0xFF1B263B);
   static const Color accent = Color(0xFFFCA311);
   static const Color white = Color(0xFFEAEAEA);

@@ -10,22 +10,25 @@ class CustomContact extends StatelessWidget {
     final textTheme = Theme.of(context).textTheme;
 
     // Responsive check
-    final bool isMobile = width < 600;
+    final bool isMobile = width < 500;
 
     return Container(
       width: double.infinity,
+      decoration: BoxDecoration(
+        image: DecorationImage(image: NetworkImage("https://plus.unsplash.com/premium_photo-1686074441885-ef5b67d89799?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzd8fG5hdnklMjBibHVlfGVufDB8fDB8fHww") , fit: BoxFit.cover)
+      ),
   
       padding: const EdgeInsets.symmetric(vertical: 60, horizontal: 40),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          // ===== TITLE =====
+        
           Text("Contact Me", style: textTheme.displayMedium),
           const SizedBox(height: 8),
-          Container(height: 2, width: 150, color: Themes.white),
+          Container(height: 2, width: 160, color: Themes.white),
           const SizedBox(height: 20),
 
-          // ===== DESCRIPTION =====
+          
           Text(
             "Have a project in mind or want to collaborate? Let's get in touch!",
             textAlign: TextAlign.center,

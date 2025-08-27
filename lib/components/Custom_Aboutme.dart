@@ -7,12 +7,15 @@ class CustomAboutme extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    bool isMobile = size.width < 700;
+    bool isMobile = size.width < 600;
+    bool isTablet = size.width < 800;
+    bool isDesktop = size.width > 800;
 
     final textTheme = Theme.of(context).textTheme; // shortcut
 
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 60, horizontal: 40),
+      decoration: BoxDecoration(image: DecorationImage(image: NetworkImage("https://plus.unsplash.com/premium_photo-1686074441885-ef5b67d89799?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzd8fG5hdnklMjBibHVlfGVufDB8fDB8fHww") , fit: BoxFit.cover)),
       child: isMobile
           ? Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -20,14 +23,15 @@ class CustomAboutme extends StatelessWidget {
                 // Skills
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+                  children: [ 
+                    
                     Row(
                       children: [
                         Icon(Icons.design_services,
                             color: Themes.white, size: 20),
                         SizedBox(width: 10),
                         Text(
-                          "UI/UX Design",
+                          "UI/UX Designing",
                           style: textTheme.bodyLarge!, // body text style
                         ),
                       ],
@@ -78,7 +82,7 @@ class CustomAboutme extends StatelessWidget {
                       spacing: 20,
                       runSpacing: 15,
                       children: [
-                        Column(
+                        Column( crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Text("20+",
                                 style: textTheme.displayMedium!), // stat number
@@ -88,7 +92,7 @@ class CustomAboutme extends StatelessWidget {
                           ],
                         ),
                         SizedBox(width: 15),
-                        Column(
+                        Column(crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Text("90%", style: textTheme.displayMedium!),
                             SizedBox(height: 5),
@@ -97,7 +101,7 @@ class CustomAboutme extends StatelessWidget {
                           ],
                         ),
                         SizedBox(width: 15),
-                        Column(
+                        Column(crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Text("1+", style: textTheme.displayMedium!),
                             SizedBox(height: 5),
@@ -126,7 +130,7 @@ class CustomAboutme extends StatelessWidget {
                               color: Themes.white, size: 30),
                           SizedBox(width: 10),
                           Text(
-                            "UI/UX Design",
+                            "UI/UX Designing",
                             style: textTheme.bodyLarge!,
                           ),
                         ],
