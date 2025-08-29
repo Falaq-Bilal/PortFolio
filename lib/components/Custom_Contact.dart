@@ -51,7 +51,7 @@ class CustomContact extends StatelessWidget {
                             style: textTheme.displayMedium!
                                 .copyWith(fontSize: 20)),
                         const SizedBox(height: 5),
-                        Text("falaqxhk@gmail.com",
+                        Text("falaqdevsinn@gmail.com",
                             style: textTheme.bodyLarge!
                                 .copyWith(color: Themes.white)),
                       ],
@@ -102,7 +102,7 @@ class CustomContact extends StatelessWidget {
                             style: textTheme.displayMedium!
                                 .copyWith(fontSize: 20)),
                         const SizedBox(height: 5),
-                        Text("falaqxhk@gmail.com",
+                        Text("falaqdevsinn@gmail.com",
                             style: textTheme.bodyLarge!
                                 .copyWith(color: Themes.white)),
                       ],

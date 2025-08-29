@@ -147,16 +147,7 @@ class HeaderContent extends StatelessWidget {
                   const SizedBox(height: 8),
                   Text("Flutter Developer", style: textTheme.displayMedium),
                   const SizedBox(height: 20),
-                  Wrap(
-                    alignment: WrapAlignment.center,
-                    spacing: 10,
-                    children: [
-                      ElevatedButton(
-                          onPressed: () {}, child: const Text("Got a project?")),
-                      OutlinedButton(
-                          onPressed: () {}, child: const Text("My Resume")),
-                    ],
-                  ),
+                 
                 ],
               )
             : Row(
@@ -180,16 +171,7 @@ class HeaderContent extends StatelessWidget {
                         const SizedBox(height: 8),
                         Text("Flutter Developer", style: textTheme.displayMedium),
                         const SizedBox(height: 20),
-                        Row(
-                          children: [
-                            ElevatedButton(
-                                onPressed: () {},
-                                child: const Text("Got a project?")),
-                            const SizedBox(width: 10),
-                            OutlinedButton(
-                                onPressed: () {}, child: const Text("My Resume")),
-                          ],
-                        ),
+                       
                       ],
                     ),
                   ),
