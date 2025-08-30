@@ -13,6 +13,7 @@ class Portfolio extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomHeader(),
+      
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -79,7 +80,9 @@ class Portfolio extends StatelessWidget {
           ),
           child: Column(
             children: [
-              HeaderContent(),
+            
+              HeaderContent(
+              ),
               CustomAboutme(),
               CustomEducation(),
               CustomProject(),
