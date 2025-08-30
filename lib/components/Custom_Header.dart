@@ -74,13 +74,13 @@ class CustomHeader extends StatelessWidget implements PreferredSizeWidget {
   Size get preferredSize => const Size.fromHeight(60);
 }
 
-// ==================== HEADER CONTENT (Body Section) ====================
+// Body Section
 
 class HeaderContent extends StatelessWidget {
   const HeaderContent({super.key});
 
   void _openCV() {
-    // ✅ Web par PDF nayi tab me open hoga
+
     html.window.open('assets/Falaq_Bilal_CV.pdf', "_blank");
   }
 
